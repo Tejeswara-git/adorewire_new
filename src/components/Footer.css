@@ -34,6 +34,18 @@
   margin-bottom: 14px;
 }
 
+.footer-logo-wrapper {
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+.footer-logo-svg {
+  width: auto;
+  height: 100%;
+  max-width: 180px;
+}
+
 .footer-logo-icon {
   width: 28px;
   height: 28px;

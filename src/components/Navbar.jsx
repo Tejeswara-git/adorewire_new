@@ -5,12 +5,11 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   const navLinks = [
-    { path: '/', label: 'Home' },
     { path: '/about', label: 'About' },
-    { path: '/programs', label: 'Programs' },
-    { path: '/volunteers', label: 'Volunteers' },
-    { path: '/events', label: 'Events' },
-    { path: '/resources', label: 'Resources' },
+    { path: '/programs', label: 'Programs', hasDropdown: true },
+    { path: '/volunteers', label: 'Volunteers', hasDropdown: true },
+    { path: '/centres', label: 'Centres' },
+    { path: '/releases', label: 'Releases', hasDropdown: true },
     { path: '/feedback', label: 'Feedback' },
   ]
 
@@ -18,14 +17,28 @@ function Navbar() {
     <nav className="navbar" id="navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-logo" id="navbar-logo">
-          <div className="navbar-logo-icon">
-            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <rect width="28" height="28" rx="6" fill="#4A90D9" />
-              <path d="M7 20L14 8L21 20H7Z" fill="white" opacity="0.9" />
-              <circle cx="14" cy="12" r="3" fill="white" />
+          <div className="navbar-logo-wrapper">
+            <svg width="120" height="60" viewBox="0 0 120 60" fill="none" className="navbar-logo-svg">
+              {/* ADORE Text with Globe */}
+              <g>
+                <text x="20" y="28" fontFamily="Arial, sans-serif" fontSize="24" fontWeight="bold" fill="#1a5490" letter-spacing="2">
+                  ADORE
+                </text>
+                {/* Globe Icon */}
+                <circle cx="88" cy="18" r="10" fill="none" stroke="#1a5490" strokeWidth="1.5"/>
+                <circle cx="88" cy="18" r="8" fill="#4a9fd8" opacity="0.3"/>
+                <path d="M78 18Q88 12 98 18" fill="none" stroke="#1a5490" strokeWidth="1"/>
+                <path d="M78 18Q88 24 98 18" fill="none" stroke="#1a5490" strokeWidth="1"/>
+              </g>
+              {/* Tagline */}
+              <text x="20" y="50" fontFamily="Arial, sans-serif" fontSize="11" fill="#666" font-style="italic">
+                motivating youth for
+              </text>
+              <text x="20" y="60" fontFamily="Arial, sans-serif" fontSize="11" fill="#4a9fd8" font-weight="bold">
+                positive action
+              </text>
             </svg>
           </div>
-          <span className="navbar-logo-text">ADORE</span>
         </Link>
 
         <ul className={`navbar-links ${menuOpen ? 'navbar-links--open' : ''}`} id="navbar-links">
@@ -37,12 +50,20 @@ function Navbar() {
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}
+                {link.hasDropdown && (
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="nav-dropdown-icon">
+                    <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                )}
               </NavLink>
             </li>
           ))}
         </ul>
 
         <div className="navbar-actions" id="navbar-actions">
+          <Link to="/signin" className="navbar-signin" id="navbar-signin">
+            Sign In
+          </Link>
           <Link to="/feedback" className="btn btn-primary btn-sm" id="navbar-join-btn">
             Join Us
           </Link>

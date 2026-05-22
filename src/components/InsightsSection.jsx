@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import insightImage from '../assets/Images/1.jpg'
 
 function InsightsSection() {
   const recentUpdates = [
@@ -32,13 +33,7 @@ function InsightsSection() {
           <h2 className="insights-title">Insights & Stories</h2>
           <div className="insights-featured">
             <div className="insights-featured-image">
-              <svg width="100%" height="100%" viewBox="0 0 500 300" fill="none" preserveAspectRatio="xMidYMid slice">
-                <rect width="500" height="300" fill="#2a3a4a"/>
-                <rect x="30" y="30" width="440" height="240" rx="10" fill="#3a4a5a" opacity="0.5"/>
-                <circle cx="250" cy="130" r="50" fill="#4a6a8a" opacity="0.4"/>
-                <text x="250" y="135" textAnchor="middle" fill="white" fontSize="16" fontFamily="Inter" opacity="0.7">Featured Story</text>
-                <rect x="60" y="200" width="380" height="40" rx="6" fill="#4a5a6a" opacity="0.3"/>
-              </svg>
+              <img src={insightImage} alt="Featured story" className="insights-featured-image" />
             </div>
             <div className="insights-featured-content">
               <span className="insights-featured-tag">Featured</span>

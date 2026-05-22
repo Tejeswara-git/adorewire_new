@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import heroImage from '../assets/Images/6.png'
 
 function HeroSection() {
   return (
@@ -31,15 +32,7 @@ function HeroSection() {
         <div className="hero-image-wrapper">
           <div className="hero-image-container">
             <div className="hero-image-placeholder">
-              <svg width="100%" height="100%" viewBox="0 0 500 400" fill="none" preserveAspectRatio="xMidYMid slice">
-                <rect width="500" height="400" fill="#3a4a5c"/>
-                <circle cx="180" cy="160" r="45" fill="#5a7a9a" opacity="0.6"/>
-                <circle cx="300" cy="140" r="55" fill="#4a6a8a" opacity="0.5"/>
-                <circle cx="240" cy="200" r="50" fill="#6a8aaa" opacity="0.4"/>
-                <rect x="100" y="220" width="300" height="120" rx="10" fill="#4a6a8a" opacity="0.3"/>
-                <text x="250" y="170" textAnchor="middle" fill="white" fontSize="18" fontFamily="Inter" opacity="0.7">Youth Together</text>
-                <text x="250" y="290" textAnchor="middle" fill="white" fontSize="14" fontFamily="Inter" opacity="0.5">Community Impact</text>
-              </svg>
+              <img src={heroImage} alt="Youth community" className="hero-image" />
             </div>
           </div>
           <div className="hero-image-dot hero-image-dot--1"></div>

@@ -15,7 +15,7 @@ const AboutCTASection = () => {
           </div>
         </div>
         <div className="about-cta-image-wrapper">
-          <img src="/src/assets/images/about-cta-img.jpg" alt="Join Us" className="about-cta-img" />
+          <img src="/src/assets/images/12.jpg" alt="Join Us" className="about-cta-img" />
         </div>
       </div>
     </section>

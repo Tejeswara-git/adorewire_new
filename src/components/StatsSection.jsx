@@ -45,7 +45,9 @@ function StatsSection() {
             <div className="stat-icon">{stat.icon}</div>
             <div className="stat-info">
               <span className="stat-value">{stat.value}</span>
-              <span className="stat-label">{stat.label}</span>
+            </div>
+            <div className="stat-info">
+            <span className="stat-label">{stat.label}</span>
             </div>
           </div>
         ))}

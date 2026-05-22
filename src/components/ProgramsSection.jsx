@@ -1,4 +1,7 @@
 import { Link } from 'react-router-dom'
+import programImage9 from '../assets/Images/9.jpg'
+import programImage10 from '../assets/Images/3.jpg'
+import programImage11 from '../assets/Images/11.jpg'
 
 function ProgramsSection() {
   const programs = [
@@ -6,19 +9,19 @@ function ProgramsSection() {
       id: 'program-career',
       title: 'Career Help Centre',
       description: 'Guiding youth with career counseling, resume building, and interview preparation to help them succeed professionally.',
-      color: '#4A90D9',
+      image: programImage9,
     },
     {
       id: 'program-community',
       title: 'Community Development',
       description: 'Engaging communities in sustainable development through collaborative projects and grassroots initiatives.',
-      color: '#E8734A',
+      image: programImage10,
     },
     {
       id: 'program-digital',
       title: 'Digital Literacy Workshops',
       description: 'Empowering individuals with essential digital skills, from basic computer usage to advanced online tools.',
-      color: '#5BAF6A',
+      image: programImage11,
     },
   ]
 
@@ -35,12 +38,7 @@ function ProgramsSection() {
           {programs.map((program) => (
             <div className="program-card" key={program.id} id={program.id}>
               <div className="program-card-image">
-                <svg width="100%" height="100%" viewBox="0 0 360 200" fill="none" preserveAspectRatio="xMidYMid slice">
-                  <rect width="360" height="200" fill={program.color} opacity="0.15"/>
-                  <rect x="30" y="30" width="300" height="140" rx="8" fill={program.color} opacity="0.12"/>
-                  <circle cx="180" cy="90" r="40" fill={program.color} opacity="0.2"/>
-                  <text x="180" y="95" textAnchor="middle" fill={program.color} fontSize="14" fontFamily="Inter" opacity="0.8">{program.title.split(' ')[0]}</text>
-                </svg>
+                <img src={program.image} alt={program.title} />
               </div>
               <div className="program-card-content">
                 <h3 className="program-card-title">{program.title}</h3>

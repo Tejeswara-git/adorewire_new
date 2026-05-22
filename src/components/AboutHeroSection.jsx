@@ -28,7 +28,7 @@ const AboutHeroSection = () => {
           <button className="btn btn-primary about-btn-get-involved">Get Involved</button>
         </div>
         <div className="about-hero-image-wrapper">
-          <img src="/src/assets/images/about-hero-img.jpg" alt="About Us" className="about-hero-img" />
+          <img src="/src/assets/images/5.webp" alt="About Us" className="about-hero-img" />
         </div>
       </div>
     </section>

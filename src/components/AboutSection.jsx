@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import aboutImage from '../assets/Images/2.jpg'
 
 function AboutSection() {
   return (
@@ -6,15 +7,7 @@ function AboutSection() {
       <div className="about-container">
         <div className="about-image-wrapper">
           <div className="about-image-placeholder">
-            <svg width="100%" height="100%" viewBox="0 0 480 360" fill="none" preserveAspectRatio="xMidYMid slice">
-              <rect width="480" height="360" fill="#e8e0d8"/>
-              <rect x="40" y="60" width="400" height="240" rx="12" fill="#c4b8a8" opacity="0.5"/>
-              <circle cx="160" cy="150" r="35" fill="#a89888" opacity="0.6"/>
-              <circle cx="280" cy="140" r="40" fill="#b8a898" opacity="0.5"/>
-              <circle cx="220" cy="180" r="30" fill="#c8b8a8" opacity="0.4"/>
-              <rect x="80" y="220" width="320" height="50" rx="8" fill="#b8a898" opacity="0.3"/>
-              <text x="240" y="170" textAnchor="middle" fill="#6a5a4a" fontSize="16" fontFamily="Inter" opacity="0.8">Group Discussion</text>
-            </svg>
+            <img src={aboutImage} alt="Group discussion" className="about-image" />
           </div>
           <div className="about-image-badge">
             <span className="about-image-badge-number">15+</span>
